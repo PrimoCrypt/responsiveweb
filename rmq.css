@@ -39,9 +39,10 @@ main{
 }
 .left-content p{
     line-height: 1.6;
-  color: var(--whiteColor);
+  color: var(white);
   font-weight: 300;
   padding: 0 20px 0 0;
+  font-size: 15px;
 }
 .right-content{
     width: 55%;
@@ -70,13 +71,6 @@ form{
     padding: 20px 20px 0 20px;
 
 }
-input{
-    padding:18px;
-    width: 100%;
-    border-radius: 5px;
-    border: 2px solid #8888886f;
-    outline: none;
-}
 input:hover{
     border-radius: 5px;
     border: 2px solid #888888;
@@ -85,9 +79,38 @@ input::placeholder{
   font-weight: 600;
   font-family: Poppins;
 }
+.input{
+  padding:18px;
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid #8888886f;
+  outline: none;
+}
 .input_field{
   position: relative;
   margin-bottom: 20px;
+}
+.input_field[data-error] .input{
+  border-color: #c92432;
+  color: #c92432;
+  background-color: #fff;
+  background: url(/images/icon-error.svg) no-repeat right;
+}
+.input:active{
+  border: 2px rgb(0, 0, 0) solid;
+}
+.button:hover{
+  background-color: hsl(154, 88%, 59%);
+  border: none;
+}
+.input_field[data-error]::after{
+  content: attr(data-error);
+  font-size: 0.7em;
+  color: red;
+  display: block;
+  float: right;
+  font-style: italic;
+  
 }
 .error_icon{
   position: absolute;
@@ -96,14 +119,14 @@ input::placeholder{
   visibility: hidden;
 }
 .error_message{
-  color: var(--redColor);
+  color: var(#c92432);
   margin-bottom: 20px;
   float: right;
   padding-top: 4px;
   display: none;
 }
 .input_field.show_error input{
-  border-color: var(--redColor);
+  border-color: var(#c92432);
 }
 .input_field.show_error .error_icon{
   visibility: visible;
@@ -112,7 +135,7 @@ input::placeholder{
   display: block;
 }
 .input_field.success input {
-  border: 2px solid var(--greenColor);
+  border: 2px solid var(green );
 }
 .input_field.success .error_icon{
   visibility: hidden;
@@ -120,7 +143,7 @@ input::placeholder{
 .input_field.success .error_message{
   display: none;
 }
-button{
+.button{
     box-shadow:0 2px #0000002f;
     background-color: hsl(154, 59%, 51%);
     display: block;
@@ -129,7 +152,6 @@ button{
     outline: none;
     border: none;
     font-size:16px;
-    box-shadow: 2px 4px 0 5px var(--greenColor);
     border-radius: 5px;
     color: rgb(233, 233, 233);   
     text-transform: uppercase;
