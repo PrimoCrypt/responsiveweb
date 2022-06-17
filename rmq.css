@@ -54,7 +54,7 @@ main{
     text-align: center;
     padding: 20px 10px;
     box-shadow:0 7px #0000002f;
-    width: 90%;
+    width: 87%;
     text-align: center;
     font-weight: 300;
 }
@@ -64,13 +64,14 @@ main{
     padding: 20px;
     border-radius: 10px;
     box-shadow:0 7px #0000002f;
-    width: 90%;
+    width: 87%;
 }
 form{
-    padding: 20px;
+    padding: 20px 20px 0 20px;
+
 }
 input{
-    padding:17px;
+    padding:18px;
     width: 100%;
     border-radius: 5px;
     border: 2px solid #8888886f;
@@ -80,6 +81,10 @@ input:hover{
     border-radius: 5px;
     border: 2px solid #888888;
 }   
+input::placeholder{
+  font-weight: 600;
+  font-family: Poppins;
+}
 .input_field{
   position: relative;
   margin-bottom: 20px;
@@ -126,11 +131,11 @@ button{
     font-size:16px;
     box-shadow: 2px 4px 0 5px var(--greenColor);
     border-radius: 5px;
-    margin-bottom: 20px;
     color: rgb(233, 233, 233);   
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 600;
     cursor: pointer;
+    box-shadow: 0 2px #00000081;
   }
 .TnC{
     font-size: 10px;
